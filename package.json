@@ -1,0 +1,27 @@
+{
+  "name": "novelator-lector",
+  "version": "0.0.1",
+  "description": "Lector de novelas para novelator.",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/http-server -c-1 ./novela",
+    "build": "./node_modules/.bin/novelator ./novela/source/novela.nvl",
+    "test": "echo 'Error: no test specified' && exit 1"
+  },
+  "keywords": ["novela"],
+  "author": "allnulled",
+  "license": "WTFPL",
+  "dependencies": {
+    "http-server": "^14.1.1",
+    "novelator": "^1.0.4"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allnulled/novelator-lector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/allnulled/novelator-lector/issues"
+  },
+  "homepage": "https://github.com/allnulled/novelator-lector#readme"
+}

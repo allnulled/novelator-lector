@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novelator | Lector</title>
+    <script src="lib/jquery.js"></script>
+    <script src="lib/novelator-lector.js"></script>
+    <link href="lib/novelator-lector.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="novelator_fondo"></div>
+    <div id="novelator_actor"></div>
+    <div id="novelator_escena"></div>
+    <div id="novelator_capitulo"></div>
+    <div id="novelator_dialogo"></div>
+    <div id="novelator_panel_de_botones">
+        <table id="novelator_botones">
+            <tr>
+                <td><button id="novelator_boton_izquierdo" onclick="Novelator_lector.ir_a_intervencion_anterior()"> « </button></td>
+                <td id="novelator_espacio_entre_botones"></td>
+                <td><button id="novelator_boton_derecho" onclick="Novelator_lector.ir_a_intervencion_posterior()"> » </button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

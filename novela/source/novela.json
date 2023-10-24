@@ -1,0 +1,16 @@
+[
+    {
+        "tipo": "sentencia de diálogo",
+        "personajes": [
+            "Carl"
+        ],
+        "dicen": "Hola, mundo."
+    },
+    {
+        "tipo": "sentencia de diálogo",
+        "personajes": [
+            "Mundo"
+        ],
+        "dicen": "No, Carl. No te voy a contestar."
+    }
+]
