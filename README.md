@@ -7,15 +7,15 @@ Lector de novelas para novelator.
 Para instalar el lector de novelator, desde consola ejecutar:
 
 ```sh
-git clone ${repo} .
+git clone https://github.com/allnulled/novelator-lector.git .
 npm install
 ```
 
 ## Desarrollo
 
-El desarrollo tiene varios aspectos, que separaremos a continuación.
+El desarrollo de la novela tiene varios puntos, que separaremos a continuación.
 
-### Escribir la novela
+### Paso 1. Escribir la novela
 
 La novela siempre se escribe en el mismo fichero:
 
@@ -23,7 +23,7 @@ La novela siempre se escribe en el mismo fichero:
 
 Por lo cual, borra su contenido actual y edita tu propia novela en él, con cualquier editor de ficheros.
 
-### Incluir imágenes
+### Paso 2. Incluir imágenes
 
 Para incluir imágenes en tu novela, debes colocar los ficheros *.jpg o *.png o cualquier otro formato de imagen soportado por HTML en la carpeta que sigue:
 
@@ -35,7 +35,7 @@ Esto sirve igual para otros ficheros, como sonidos, vídeos, o documentos de apo
 
 Puedes crear carpetas para organizar los ficheros a tu antojo, simplemente recuerda de referenciarlos adecuadamente en tu novela.
 
-### Compilar la novela
+### Paso 3. Compilar la novela
 
 Cuando hayas terminado de escribir tu novela, puedes compilarla a JSON con el siguiente comando:
 
