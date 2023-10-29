@@ -71,6 +71,18 @@ window.addEventListener("load", async function() {
             api.intervencion_actual--;
             api.actualizar_intervencion();
         };
+        api.oir_en_voz = function() {
+            const msg = new SpeechSynthesisUtterance();
+            const voices = speechSynthesis.getVoices().filter(voice => voice.name === "Spanish (Spain)")[0];
+            msg.voice = voices[0];
+            msg.volume = 1; // From 0 to 1
+            msg.rate = 1; // From 0.1 to 10
+            msg.pitch = 2; // From 0 to 2
+            msg.text = api.dialogo.text();
+            msg.lang = "es";
+            speechSynthesis.speak(msg);
+
+        }
         api.todas_las_intervenciones = await jQuery.ajax("/source/novela.json");
         window.Novelator_lector = api;
     } catch (error) {

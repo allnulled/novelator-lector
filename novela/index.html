@@ -28,11 +28,21 @@
     <div id="novelator_panel_de_botones">
         <table id="novelator_botones">
             <tr>
-                <td><button id="novelator_boton_izquierdo" onclick="Novelator_lector.ir_a_intervencion_anterior()"> «
-                    </button></td>
-                <td id="novelator_espacio_entre_botones"></td>
-                <td><button id="novelator_boton_derecho" onclick="Novelator_lector.ir_a_intervencion_posterior()"> »
-                    </button></td>
+                <td>
+                    <button id="novelator_boton_izquierdo" onclick="Novelator_lector.ir_a_intervencion_anterior()">
+                         «
+                    </button>
+                </td>
+                <td id="novelator_espacio_entre_botones">
+                    <button id="novelator_boton_oir_en_voz" onclick="Novelator_lector.oir_en_voz()">
+                        Voz
+                    </button>
+                </td>
+                <td>
+                    <button id="novelator_boton_derecho" onclick="Novelator_lector.ir_a_intervencion_posterior()">
+                         »
+                    </button>
+                </td>
             </tr>
         </table>
     </div>

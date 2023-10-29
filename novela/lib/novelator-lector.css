@@ -53,3 +53,6 @@ html,body {
     border: 3px double gold;
     padding: 5px;
 }
+#novelator_espacio_entre_botones {
+    text-align: center;
+}

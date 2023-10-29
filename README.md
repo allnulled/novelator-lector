@@ -49,6 +49,12 @@ Esto producirá el fichero JSON en:
 
 Este fichero es el que usará la aplicación lectora.
 
+Si quieres ir editando mientras automáticamente se compila, puedes usar en su lugar el comando:
+
+```sh
+npm run building
+```
+
 ## Uso
 
 Para correr tu novela y ver cómo queda, desde consola ejecutar:
