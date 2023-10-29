@@ -1,6 +1,7 @@
 window.addEventListener("load", async function() {
     try {
         const jFondo = jQuery("#novelator_fondo");
+        const jAccion = jQuery("#novelator_accion");
         const jActor = jQuery("#novelator_actor");
         const jEscena = jQuery("#novelator_escena");
         const jCapitulo = jQuery("#novelator_capitulo");
@@ -8,6 +9,7 @@ window.addEventListener("load", async function() {
         const api = {};
         api.intervencion_actual = -1;
         api.fondo = jFondo;
+        api.accion = jAccion;
         api.actor = jActor;
         api.dialogo = jDialogo;
         api.capitulo = jCapitulo;
@@ -78,7 +80,7 @@ window.addEventListener("load", async function() {
             msg.volume = 1; // From 0 to 1
             msg.rate = 1; // From 0.1 to 10
             msg.pitch = 2; // From 0 to 2
-            msg.text = api.dialogo.text();
+            msg.text = api.accion.text();
             msg.lang = "es";
             speechSynthesis.speak(msg);
 
