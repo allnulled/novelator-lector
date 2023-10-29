@@ -1,5 +1,17 @@
 [
     {
+        "tipo": "sentencia de cambio de fondo",
+        "fondo": "assets/universo.jpg"
+    },
+    {
+        "tipo": "sentencia de cambio de capítulo",
+        "capitulo": "Capítulo 1: La situación."
+    },
+    {
+        "tipo": "sentencia de cambio de escena",
+        "escena": "Escena 1: Conversación inicial."
+    },
+    {
         "tipo": "sentencia de diálogo",
         "personajes": [
             "Carl"
@@ -12,5 +24,33 @@
             "Mundo"
         ],
         "dicen": "No, Carl. No te voy a contestar."
+    },
+    {
+        "tipo": "sentencia de diálogo",
+        "personajes": [
+            "Carl"
+        ],
+        "dicen": "Vamos, mundo, no seas así."
+    },
+    {
+        "tipo": "sentencia de diálogo",
+        "personajes": [
+            "Mundo"
+        ],
+        "dicen": "Olvídame, Carl."
+    },
+    {
+        "tipo": "sentencia de diálogo",
+        "personajes": [
+            "Carl"
+        ],
+        "dicen": "Bueno, ¿y eso cómo se hace?"
+    },
+    {
+        "tipo": "sentencia de diálogo",
+        "personajes": [
+            "Mundo"
+        ],
+        "dicen": "Pues deja de soñar."
     }
 ]

@@ -14,7 +14,7 @@ window.addEventListener("load", async function() {
         api.escena = jEscena;
         api.cambiar_fondo = function(imagen) {
             api.fondo.html("");
-            api.fondo.append(jQuery("img").attr("src", imagen));
+            api.fondo.append(jQuery("<img>").attr("src", imagen));
             api.actor.text("");
             api.dialogo.text("");
         };
