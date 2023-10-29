@@ -58,6 +58,7 @@ window.addEventListener("load", async function() {
                     break;
             }
             console.log(intervencion);
+            api.guardar_pagina();
         };
         api.ir_a_intervencion_posterior = function() {
             if(api.intervencion_actual === api.todas_las_intervenciones.length-1) {
@@ -83,10 +84,41 @@ window.addEventListener("load", async function() {
             msg.text = api.accion.text();
             msg.lang = "es";
             speechSynthesis.speak(msg);
-
-        }
+        };
+        api.guardar_pagina = function() {
+            const titulo_de_novela = jQuery("#novelator_titulo_de_novela").text();
+            const almacen = {
+                fondo: api.fondo.html(),
+                escena: api.escena.html(),
+                capitulo: api.capitulo.html(),
+                actor: api.actor.html(),
+                dialogo: api.dialogo.html(),
+                pagina_actual: api.intervencion_actual,
+            };
+            const almacen_json = JSON.stringify(almacen);
+            localStorage.setItem("NOVELATOR_" + titulo_de_novela, almacen_json);
+        };
+        api.cargar_pagina = function() {
+            try {
+                const titulo_de_novela = jQuery("#novelator_titulo_de_novela").text();
+                const almacen_json = localStorage.getItem("NOVELATOR_" + titulo_de_novela);
+                const almacen = JSON.parse(almacen_json);
+                if(!almacen) throw new Error("Almacen no iniciado");
+                if(!("pagina_actual" in almacen)) throw new Error("Pagina no determinada");
+                const pagina_actual = almacen.pagina_actual;
+                api.intervencion_actual = pagina_actual;
+                api.fondo.html(almacen.fondo);
+                api.escena.html(almacen.escena);
+                api.capitulo.html(almacen.capitulo);
+                api.actor.html(almacen.actor);
+                api.dialogo.html(almacen.dialogo);
+            } catch(error) {
+                console.log(error);
+            }
+        };
         api.todas_las_intervenciones = await jQuery.ajax("/source/novela.json");
         window.Novelator_lector = api;
+        api.cargar_pagina();
     } catch (error) {
 
     }
